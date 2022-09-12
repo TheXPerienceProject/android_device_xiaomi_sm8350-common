@@ -56,3 +56,5 @@ odm                                                     /odm                   e
 
 # mount spunvm partition to /mnt/vendor/spunvm for UEFI IAR-DB
 /dev/block/bootdevice/by-name/spunvm                    /mnt/vendor/spunvm     vfat    rw,noatime,shortname=lower,uid=1000,gid=1000,dmask=007,fmask=007,context=u:object_r:vendor_spunvm_file:s0 wait
+
+/dev/block/mmcblk1p1                                    /sdcard                vfat    nosuid,nodev                                         wait,recoveryonly
