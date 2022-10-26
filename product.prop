@@ -15,3 +15,5 @@ ro.lmk.swap_free_low_percentage=100
 ro.xpe.chipset=Snapdragon® 778G
 ro.xpe.chipset=Snapdragon® 778G
 
+# Phantom process monitoring
+persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
