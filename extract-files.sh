@@ -64,9 +64,6 @@ function blob_fixup() {
             patchelf --replace-needed libavservices_minijail_vendor.so libavservices_minijail.so "${2}"
             patchelf --replace-needed libcodec2_hidl@1.0.so libcodec2_hidl@1.0.stock.so "${2}"
             ;;
-        system_ext/lib64/libwfdnative.so)
-            "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
-            ;;
         vendor/etc/camera/pureShot_parameter.xml \
         |vendor/etc/camera/pureView_parameter.xml)
             sed -i 's/=\([0-9]\+\)>/="\1">/g' "${2}"
@@ -78,9 +75,6 @@ function blob_fixup() {
             ;;
         vendor/etc/vintf/manifest/c2_manifest_vendor.xml)
             sed -ni '/ozoaudio/!p' "${2}"
-            ;;
-        vendor/lib64/android.hardware.secure_element@1.0-impl.so)
-            "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
             ;;
         vendor/lib/libcodec2_hidl@1.0.stock.so)
             patchelf --set-soname libcodec2_hidl@1.0.stock.so "${2}"
