@@ -308,10 +308,10 @@
         <item>tw.nekomimi.nekogram</item>
     </string-array>
 
-    <!-- Smart charging -->
-    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/qcom-battery/input_suspend</string>
-    <string name="config_SmartChargingSuspendValue" translatable="false">1</string>
-    <string name="config_SmartChargingResumeValue" translatable="false">0</string>
+    <!-- Battery Protection -->
+    <string name="config_batteryProtectionSysfsNode" translatable="false">/sys/class/qcom-battery/input_suspend</string>
+    <string name="config_batteryProtectionSuspendValue" translatable="false">1</string>
+    <string name="config_batteryProtectionResumeValue" translatable="false">0</string>
 
     <!-- Delay that allows some content to arrive at the display before switching
          from DOZE to ON, in millis. -->
