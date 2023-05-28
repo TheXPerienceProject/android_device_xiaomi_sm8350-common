@@ -90,16 +90,14 @@ function blob_fixup() {
             sed -i 's/xml=version/xml\ version/g' "${2}"
 	    ;;
         vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0-impl.so)
-            hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/7C000094881640F9/1F2003D5881640F9/g" | xxd -r -p > "${EXTRACT_TMP_DIR}/${1##*/}"
-            mv "${EXTRACT_TMP_DIR}/${1##*/}" "${2}"
+            "${SIGSCAN}" -p "7c 00 00 94" -P "1F 20 03 D5" -f "${2}"
             ;;
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
             hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/8D0A0094AE1640F9/1F2003D5AE1640F9/g" | xxd -r -p > "${EXTRACT_TMP_DIR}/${1##*/}"
             mv "${EXTRACT_TMP_DIR}/${1##*/}" "${2}"
             ;;
         vendor/lib64/hw/camera.xiaomi.so)
-            hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/5E070094881640F9/1F2003D5881640F9/g; s/AA060094881640F9/1F2003D5881640F9/g" | xxd -r -p > "${EXTRACT_TMP_DIR}/${1##*/}"
-            mv "${EXTRACT_TMP_DIR}/${1##*/}" "${2}"
+            "${SIGSCAN}" -p "50 07 00 94" -P "1F 20 03 D5" -f "${2}"
             ;;
         vendor/lib64/libwa_sat.so)
             sed -i 's/\/system\/lib64\([^\/]\)/\/vendor\/lib64\1/g' "${2}"
