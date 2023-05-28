@@ -505,6 +505,15 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    <!--  IOP hal -->
+    <hal format="hidl">
+        <name>vendor.qti.hardware.iop</name>
+        <version>2.0</version>
+        <interface>
+            <name>IIop</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <!-- bluetooth -->
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
