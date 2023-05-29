@@ -35,21 +35,19 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libvolumelistener \
-    libtinycompress
+    libtinycompress \
+    libvolumelistener
 
 PRODUCT_PACKAGES += \
     audioadsprpcd \
     audio.r_submix.default \
-    audio.primary.default \
-    audio.usb.default \
-    libaudio-resampler
+    audio.usb.default
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio@7.0-impl:32 \
-    android.hardware.audio.effect@7.0-impl:32 \
+    android.hardware.audio@6.0-impl:32 \
+    android.hardware.audio.effect@6.0-impl:32 \
     android.hardware.audio.service \
-    android.hardware.soundtrigger@2.3-impl
+    android.hardware.soundtrigger@2.2-impl
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt
