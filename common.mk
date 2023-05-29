@@ -451,9 +451,13 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Platform
 TARGET_BOARD_PLATFORM := lahaina
 TARGET_COMMON_QTI_COMPONENTS := \
+    adreno \
+    av \
     bt \
+    media \
     perf \
-    telephony
+    telephony \
+    wfd
 
 # Power
 PRODUCT_PACKAGES += \
@@ -622,9 +626,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 PRODUCT_VENDOR_PROPERTIES += \
     ro.secure=0 \
