@@ -28,6 +28,7 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Audio
 PRODUCT_PACKAGES += \
+    libeffectproxy \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
