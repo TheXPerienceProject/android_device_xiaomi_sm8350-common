@@ -209,6 +209,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     hardware/qcom-caf/sm8350/display/config/snapdragon_color_libs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/snapdragon_color_libs_config.xml
 
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.sf.use_latest_hwc_vsync_period=0
+
 # Dsp
 PRODUCT_PACKAGES += \
     DSPVolumeSynchronizer
