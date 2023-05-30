@@ -423,7 +423,8 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 TARGET_BOARD_PLATFORM := lahaina
 TARGET_COMMON_QTI_COMPONENTS := \
     perf \
-    telephony
+    telephony \
+    wfd
 
 # Power
 PRODUCT_PACKAGES += \
