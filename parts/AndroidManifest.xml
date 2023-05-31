@@ -119,7 +119,5 @@
                 android:resource="@string/clear_speaker_summary" />
         </activity>
 
-        </service>
-
     </application>
 </manifest>
