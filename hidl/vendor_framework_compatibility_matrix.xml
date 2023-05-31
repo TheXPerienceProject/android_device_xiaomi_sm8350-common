@@ -1193,7 +1193,3 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
 </compatibility-matrix>
- 60 changes: 0 additions & 60 deletions60  
-livedisplay/Android.bp
-
-</compatibility-matrix>
