@@ -135,6 +135,9 @@ PRODUCT_PACKAGES += \
     ibgui_vendor \
     libion.vendor \
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.aperture,org.lineageos.aperture.dev
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/st_license.lic:$(TARGET_COPY_OUT_VENDOR)/etc/camera/st_license.lic
 
