@@ -436,6 +436,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Platform
 TARGET_BOARD_PLATFORM := lahaina
 TARGET_COMMON_QTI_COMPONENTS := \
+    charging \
     perf \
     telephony \
     wfd
