@@ -52,3 +52,6 @@ persist.vendor.sensors.enable.mag_filter=true
 
 # WFD
 persist.debug.wfd.enable=1
+
+#Evita que se desactive la carga previa de bibliotecas gráficas
+ro.zygote.disable_gl_preload=false
