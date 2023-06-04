@@ -215,13 +215,13 @@ vendor/lib/libcodec2_vndk.so:vendor/lib/libcodec2_vndk.stock.so
 vendor/lib/libdolbyottcameracontrol.so
 vendor/lib/libdovi.so
 
-# DPM
+# DPM - from vili V14.0.8.0.TKDEUXM
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
 
-# DRM
+# DRM - from vili V14.0.8.0.TKDEUXM
 vendor/bin/qseecomd
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/init/qseecomd.rc
@@ -263,7 +263,7 @@ vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
-# Gatekeeper
+# Gatekeeper - from vili V14.0.8.0.TKDEUXM
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
@@ -339,7 +339,7 @@ vendor/lib64/libllvm-qcom.so
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 -system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
-# IOP
+# IOP - from vili V14.0.8.0.TKDEUXM
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
 vendor/lib/libqti-iopd-client.so
@@ -351,7 +351,7 @@ vendor/lib64/libqti-iopd.so
 vendor/lib64/vendor.qti.hardware.iop@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@2.0.so
 
-# IMS
+# IMS - from vili V14.0.8.0.TKDEUXM
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdaemon
 vendor/etc/init/ims_rtp_daemon.rc
@@ -399,7 +399,7 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 
-# Keymaster
+# Keymaster - from vili V14.0.8.0.TKDEUXM
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
 vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
 vendor/lib64/libkeymasterdeviceutils.so
@@ -534,7 +534,7 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
-# QCV
+# QCV - from vili V14.0.8.0.TKDEUXM
 vendor/bin/init.qti.qcv.sh
 vendor/etc/init/init.qti.qcv.rc
 vendor/lib/libsoc_helper.so
@@ -803,3 +803,4 @@ vendor/lib/libwfduibcsrcinterface_proprietary.so
 vendor/lib/libwfdutils_proprietary.so
 vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
+vendor/lib/libwfdaac_vendor
