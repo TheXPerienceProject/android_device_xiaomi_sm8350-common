@@ -1,0 +1,4 @@
+set_prop(vendor_init, vendor_fp_prop)
+
+# Cgroups
+allow vendor_init cgroup:file getattr;
