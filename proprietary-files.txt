@@ -117,7 +117,7 @@ vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libfastcvopt.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
-# Configstore
+# Configstore - from lisa MIUI V14.0.3.0.TKOMIXM 
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
@@ -263,7 +263,7 @@ vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
-# Gatekeeper - from vili V14.0.2.0.TKDMIXM
+# Gatekeeper - from lisa MIUI V14.0.3.0.TKOMIXM 
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
@@ -399,7 +399,7 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 
-# Keymaster - from vili V14.0.2.0.TKDMIXM
+# Keymaster - from lisa MIUI V14.0.3.0.TKOMIXM 
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
 vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
 vendor/lib64/libkeymasterdeviceutils.so
@@ -736,13 +736,14 @@ vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
-# Trusted Execution Environment connector - from vili V14.0.2.0.TKDMIXM
+# Trusted Execution Environment connector - from lisa MIUI V14.0.3.0.TKOMIXM 
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 vendor/lib64/libGPQTEEC_vendor.so
 vendor/lib64/libGPTEE_vendor.so
 vendor/lib64/libQTEEConnector_vendor.so
+vendor/lib64/libQTEEConnector_listener.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
 # VPP - from vili V14.0.2.0.TKDMIXM
