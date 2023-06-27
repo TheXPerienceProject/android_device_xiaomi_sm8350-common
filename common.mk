@@ -445,6 +445,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     charging \
     perf \
+    qseecomd \
     telephony \
     wfd
 
