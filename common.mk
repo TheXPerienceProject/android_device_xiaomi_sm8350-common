@@ -182,6 +182,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.sf.use_latest_hwc_vsync_period=0
+# Display snapdragon color libs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/snapdragon_color_libs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/snapdragon_color_libs_config.xml
 
 # Dolby
 PRODUCT_COPY_FILES += \
