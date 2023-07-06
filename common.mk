@@ -199,6 +199,7 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libqdMetaData.system \
     libtinyxml \
+    libxml2 \
     memtrack.default
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
