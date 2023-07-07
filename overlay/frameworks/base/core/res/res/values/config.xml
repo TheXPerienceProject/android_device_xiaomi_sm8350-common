@@ -265,11 +265,21 @@
 
     <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
     <integer-array name="config_availableColorModes">
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
         <item>258</item> <!-- vivid -->
         <item>256</item> <!-- saturated -->
         <item>257</item> <!-- original -->
         <item>268</item> <!-- p3 -->
         <item>267</item> <!-- srgb -->
+        <item>259</item>
+        <item>260</item>
+        <item>261</item>
+        <item>262</item>
+        <item>263</item>
+        <item>264</item>
+        <item>265</item>
     </integer-array>
 
     <!-- Color mode to use when accessibility transforms are enabled. This color mode must be
