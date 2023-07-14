@@ -85,15 +85,6 @@ vendor.gralloc.disable_ubwc=0
 vendor.display.enable_allow_idle_fallback=1
 vendor.display.enable_rc_support=1
 
-# Dolby
-vendor.audio.dolby.ds2.enabled=false
-vendor.audio.dolby.ds2.hardbypass=false
-ro.vendor.audio.dolby.dax.version=DAX3_3.6.0.12_r1
-ro.vendor.product.device.db=OP_DEVICE
-ro.vendor.product.manufacturer.db=OP_PHONE
-vendor.product.device=OP_PHONE
-vendor.product.manufacturer=OPD
-
 # DPM
 persist.vendor.dpm.feature=1
 persist.vendor.dpm.idletimer.mode=default
