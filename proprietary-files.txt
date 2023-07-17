@@ -878,8 +878,8 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 
-# Ril Netmgrd - from miui_LISAGlobal_V14.0.2.0.TKOMIXM
-vendor/bin/netmgrd|40d5498b821478c8bb3dfe10cc2caa1c73f75dff
+# Data - LA.UM.9.14.r1-19300.01-LAHAINA.QSSI12.0
+vendor/bin/netmgrd|4254e808131fa3a13aec1474bb769dbd539379ff
 
 # Secure element
 vendor/bin/hw/vendor.qti.secure_element@1.2-service
