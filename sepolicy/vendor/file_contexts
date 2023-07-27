@@ -81,12 +81,6 @@
 /data/vendor/mac_addr(/.*)?                    u:object_r:vendor_wifi_vendor_data_file:s0
 /data/vendor/wlan_logs(/.*)?                   u:object_r:vendor_wifi_vendor_data_file:s0
 
-# Data files
-/data/vendor/dolby(/.*)?   u:object_r:vendor_data_file:s0
-
-# Dolby
-/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service                                        u:object_r:hal_dms_default_exec:s0
-
 # Wakeup nodes
 /sys/devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:sound/Listen\s[0-9]+\sAudio\sService/wakeup/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/platform/goodix_ts.0/wakeup/wakeup[0-60]/event_count u:object_r:sysfs_wakeup:s0
