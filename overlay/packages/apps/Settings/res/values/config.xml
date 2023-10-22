@@ -75,4 +75,7 @@
     <!-- Indicates whether device has a side mounted fingerprint sensor,
     but a dedicated one, i.e. not embedded in the power button. -->
     <bool name="config_is_side_fps" translatable="false">true</bool>
+
+    <!-- Whether to show the Preference for Adaptive connectivity -->
+    <bool name="config_show_adaptive_connectivity">true</bool>
 </resources>
