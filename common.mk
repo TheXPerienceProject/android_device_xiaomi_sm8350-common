@@ -515,9 +515,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     $(LOCAL_PATH)/gps \
-    hardware/xiaomi \
-    packages/modules/Bluetooth/android/app \
-    system/bt/conf
+    hardware/xiaomi
 
 # Telephony
 PRODUCT_PACKAGES += \
