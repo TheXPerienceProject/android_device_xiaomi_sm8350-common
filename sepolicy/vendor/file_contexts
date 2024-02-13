@@ -25,6 +25,11 @@
 /vendor/lib(64)?/rfsa/adsp/libsnpe_htp_v66_skel\.so u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/rfsa/adsp/libsnpe_htp_v68_skel\.so u:object_r:same_process_hal_file:s0
 
+# Firmware
+/bt_firmware(/.*)?                                                                                                                u:object_r:bt_firmware_file:s0
+/dsp(/.*)?                         																			                      u:object_r:bt_firmware_file:s0
+/firmware(/.*)?                                                                                                                   u:object_r:firmware_file:s0
+
 # Hexagon DSP-side executable needed for Halide operation
 # This is labeled as public_adsprpcd_file as it needs to be read by apps
 # (e.g. Google Camera App)

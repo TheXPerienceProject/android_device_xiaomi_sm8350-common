@@ -182,7 +182,7 @@ VENDOR_SECURITY_PATCH := 2023-01-01
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
-
+TARGET_MOUNT_POINTS_SYMLINKS := false
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
