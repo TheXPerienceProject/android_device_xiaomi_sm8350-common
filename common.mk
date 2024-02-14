@@ -20,6 +20,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Inherit proprietary targets
 $(call inherit-product, vendor/xiaomi/sm8350-common/sm8350-common-vendor.mk)
 
+# Get non-open-source specific aspects.
+$(call inherit-product-if-exists, vendor/qcom/common/system/display/display-vendor.mk)
+$(call inherit-product, vendor/qcom/common/vendor/display/5.4/display-vendor.mk)
+
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
@@ -454,7 +458,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     alarm \
     av \
     charging \
-    display \
     media \
     perf \
     qseecomd \
