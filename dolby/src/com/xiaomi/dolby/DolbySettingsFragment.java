@@ -63,7 +63,7 @@ public class DolbySettingsFragment extends PreferenceFragment implements
 
     private MainSwitchPreference mSwitchBar;
     private ListPreference mProfilePref, mPresetPref, mStereoPref, mDialoguePref;
-    private SwitchPreference mBassPref, mVirtualizerPref, mVolumePref;
+    private SwitchPreferenceCompat mBassPref, mVirtualizerPref, mVolumePref;
     private Preference mResetPref;
     private CharSequence[] mPresets, mDeValues, mSwValues;
 
@@ -114,7 +114,7 @@ public class DolbySettingsFragment extends PreferenceFragment implements
         mPresetPref.setOnPreferenceChangeListener(this);
         mPresets = mPresetPref.getEntryValues();
 
-        mVirtualizerPref = (SwitchPreference) findPreference(PREF_VIRTUALIZER);
+        mVirtualizerPref = (SwitchPreferenceCompat) findPreference(PREF_VIRTUALIZER);
         mVirtualizerPref.setOnPreferenceChangeListener(this);
 
         mStereoPref = (ListPreference) findPreference(PREF_STEREO);
@@ -125,10 +125,10 @@ public class DolbySettingsFragment extends PreferenceFragment implements
         mDialoguePref.setOnPreferenceChangeListener(this);
         mDeValues = mDialoguePref.getEntryValues();
 
-        mBassPref = (SwitchPreference) findPreference(PREF_BASS);
+        mBassPref = (SwitchPreferenceCompat) findPreference(PREF_BASS);
         mBassPref.setOnPreferenceChangeListener(this);
 
-        mVolumePref = (SwitchPreference) findPreference(PREF_VOLUME);
+        mVolumePref = (SwitchPreferenceCompat) findPreference(PREF_VOLUME);
         mVolumePref.setOnPreferenceChangeListener(this);
 
         mResetPref = (Preference) findPreference(PREF_RESET);
