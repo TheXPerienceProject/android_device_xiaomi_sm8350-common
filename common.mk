@@ -457,6 +457,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     audio \
     alarm \
     av \
+    bt \
     charging \
     media \
     perf \
