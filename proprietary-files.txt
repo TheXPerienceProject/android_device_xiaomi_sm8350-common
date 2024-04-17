@@ -9,8 +9,6 @@ vendor/lib64/libadsprpc.so
 vendor/lib64/libtinycompress.so
 
 # Audio FX modules
-system_ext/etc/permissions/audiosphere.xml
-system_ext/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libshoebox.so
 vendor/lib/soundfx/libmisoundfx.so
@@ -132,7 +130,7 @@ vendor/etc/init/vendor.qti.diag.rc
 vendor/lib64/vendor.qti.diaghal@1.0.so
 
 # Media (Dolby Vision) - from vili V13.0.21.0.SKDEUXM
--vendor/etc/vintf/manifest/c2_manifest_vendor.xml
+#-vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/bin/hw/dolbycodec2
 vendor/etc/dolby_vision.cfg
 vendor/etc/init/dolbycodec2.rc
@@ -180,20 +178,6 @@ vendor/lib64/libstagefright_soft_ddpdec.so
 vendor/lib64/libstagefrightdolby.so
 
 # DPM - from vili V14.0.2.0.TKDMIXM
-system/framework/tcmclient.jar
-system_ext/bin/dpmd
-system_ext/etc/dpm/dpm.conf
-system_ext/etc/init/dpmd.rc
-system_ext/etc/permissions/com.qti.dpmframework.xml
-system_ext/etc/permissions/dpmapi.xml
-system_ext/framework/com.qti.dpmframework.jar
-system_ext/framework/dpmapi.jar
-system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so
-system_ext/lib64/libdpmctmgr.so
-system_ext/lib64/libdpmfdmgr.so
-system_ext/lib64/libdpmframework.so
-system_ext/lib64/libdpmtcm.so
-system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
@@ -657,10 +641,6 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # Soter service (Tencent) - from vili V14.0.2.0.TKDMIXM
 -vendor/app/SoterService/SoterService.apk
-
-# Spatial Audio
-vendor/lib/soundfx/libspatialaudio.so
-vendor/lib64/soundfx/libspatialaudio.so
 
 # Thermal - from vili V14.0.2.0.TKDMIXM
 vendor/bin/mi_thermald
