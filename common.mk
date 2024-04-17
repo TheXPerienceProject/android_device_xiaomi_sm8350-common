@@ -480,7 +480,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     audio \
     alarm \
-    av \
     bt \
     charging \
     media \
