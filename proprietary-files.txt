@@ -375,7 +375,7 @@ vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 #vendor/lib64/libkcl.so | fd376542f0081dec302c73e374556fc4
 #vendor/lib64/libkernelmanager.so | f9e2d973ad6e41b18b17a3fb745283c2
 
-# Graphics (Adreno) - from Adreno v805 from oculus
+# Graphics (Adreno) - from Adreno v819 from oculus
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
@@ -429,7 +429,7 @@ vendor/lib64/libc2d30_bltlib.so
 vendor/lib/libC2D2.so|bf22239cc4a003a6cd1b3e273f60dc37e4d51730
 vendor/lib64/libC2D2.so|21a3b027b0857ee910f9db3e7558f35aafaadef5
 
-# Graphics (Adreno firmware) - from Adreno v805 from oculus
+# Graphics (Adreno firmware) - from Adreno v819 from oculus
 vendor/firmware/a650_gmu.bin|c744acb10afb7c980d333c5b6521e2a18993ff14
 vendor/firmware/a650_sqe.fw|a011deb174929b874fb668d7c8041cfb712b6417
 
@@ -439,7 +439,7 @@ vendor/gpu/kbc/unified_kbcs_32.bin
 vendor/gpu/kbc/unified_kbcs_64.bin
 vendor/gpu/kbc/unified_ksqs.bin
 
-# Graphics (Vulkan) - from Adreno v805 from oculus
+# Graphics (Vulkan) - from Adreno v819 from oculus
 vendor/lib/hw/vulkan.adreno.so|13983c19954458461fdd99d0914460299986f395
 vendor/lib64/hw/vulkan.adreno.so|5b047e34658c1f7deff061daeb8ca751bd75af31
 
