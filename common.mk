@@ -209,10 +209,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     hardware/qcom-caf/sm8350/display/config/snapdragon_color_libs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/snapdragon_color_libs_config.xml
 
-# Dolby
+# Dsp
 PRODUCT_PACKAGES += \
-    DSPVolumeSynchronizer \
-    XiaomiDolby
+    DSPVolumeSynchronizer
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -220,14 +219,15 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     libcrypto-v33
 
-# Dolby Config File
+#dolby
+TARGET_SHIPS_SOUND_ENHANCEMENT := true
+$(call inherit-product, vendor/sony/extra/extra.mk)
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/dolby/config/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
 
 # Dolby Props
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1 \
-    ro.vendor.audio.dolby.dax.version=DAX3_3.6 \
     ro.vendor.audio.dolby.dax.support=true \
     ro.vendor.audio.dolby.surround.enable=true
 

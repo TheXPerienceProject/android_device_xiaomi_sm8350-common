@@ -58,6 +58,10 @@ TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED := true
 # Display
 TARGET_SCREEN_DENSITY ?= 440
 
+# Dolby
+TARGET_SHIPS_SOUND_ENHANCEMENT := true
+include vendor/sony/extra/BoardConfigExtra.mk
+
 # Dolby Vision
 SOONG_CONFIG_NAMESPACES += dolby_vision
 SOONG_CONFIG_dolby_vision += enabled
@@ -182,7 +186,6 @@ include device/qcom/sepolicy_vndr/SEPolicy.mk
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/dolby
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 # Soong
