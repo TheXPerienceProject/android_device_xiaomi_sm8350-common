@@ -106,9 +106,6 @@ function blob_fixup() {
         vendor/etc/msm_irqbalance.conf)
             sed -i "s/IGNORED_IRQ=27,23,38$/&,115,332/" "${2}"
             ;;
-        vendor/lib/soundfx/libhwdap.so | vendor/lib64/soundfx/libhwdap.so)
-            "${PATCHELF}" --add-needed "dolbyparam_shim.so" "${2}"
-            ;;
     esac
 }
 
