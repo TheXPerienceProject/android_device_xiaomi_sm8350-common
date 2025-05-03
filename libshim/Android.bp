@@ -1,0 +1,11 @@
+//
+// Copyright (C) 2024 The XPerience Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "dolbyparam_shim",
+    srcs: ["dolbyparam_shim.c"],
+    vendor: true,
+}
