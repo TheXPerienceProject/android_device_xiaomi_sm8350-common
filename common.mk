@@ -223,6 +223,9 @@ PRODUCT_PACKAGES += \
 TARGET_SHIPS_SOUND_ENHANCEMENT := true
 $(call inherit-product, vendor/sony/extra/extra.mk)
 
+PRODUCT_PACKAGES += \
+    dolbyparam_shim
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/dolby/config/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
 
