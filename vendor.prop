@@ -155,17 +155,23 @@ ro.soc.manufacturer=QTI
 ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.metadata.method=dm-default-key
 
+# Dexopt
+persist.sys.dalvik.multithread=true
+pm.dexopt.first-boot=quicken
+pm.dexopt.bg-dexopt=everything
+pm.dexopt.boot=verify
+pm.dexopt.install=speed-profile
+dalvik.vm.image-dex2oat-filter=speed
+dalvik.vm.image-dex2oat-threads=8
+dalvik.vm.dex2oat-filter=speed
+dalvik.vm.dex2oat-threads=8
+dalvik.vm.dex2oat64.enabled=true
+
 # DPM
 persist.vendor.dpm.feature=1
 persist.vendor.dpm.idletimer.mode=default
 persist.vendor.dpm.nsrm.bkg.evt=3955
 persist.vendor.dpmhalservice.enable=1
-
-# Fingerprint aidl
-ro.vendor.fingerprint.type=side
-ro.vendor.fingerprint.sensor_location=1080|990|200|local:4630946711218184577
-persist.vendor.fingerprint.type=side
-persist.vendor.fingerprint.sensor_location=1080|990|200|local:4630946711218184577
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
