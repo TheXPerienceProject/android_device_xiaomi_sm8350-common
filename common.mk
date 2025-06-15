@@ -138,10 +138,9 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
 # Camera
-$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
+$(call inherit-product, vendor/xiaomi/camera/miuicamera.mk)
 
 PRODUCT_PACKAGES += \
-    Aperture \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
     android.hardware.graphics.common-V4-ndk.vendor \
