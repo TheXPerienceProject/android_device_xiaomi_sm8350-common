@@ -130,9 +130,8 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl-qti \
-    android.hardware.boot@1.2-impl-qti.recovery \
-    android.hardware.boot@1.2-service
+    android.hardware.boot-service.qti \
+    android.hardware.boot-service.qti.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
@@ -241,14 +240,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/dolby/media/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
 
 # Dolby VNDK libs
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_foundation-v33.so \
-    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so \
-    prebuilts/vndk/v32/arm/arch-arm-armv7-a-neon/shared/vndk-sp/android.hardware.common-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.common-V2-ndk_platform.so \
-    prebuilts/vndk/v32/arm/arch-arm-armv7-a-neon/shared/vndk-sp/android.hardware.graphics.common-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.graphics.common-V2-ndk_platform.so \
-    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/android.hardware.common-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.common-V2-ndk_platform.so \
-    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/android.hardware.graphics.common-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.common-V2-ndk_platform.so \
-    prebuilts/vndk/v31/arm/arch-arm-armv7-a-neon/shared/vndk-core/libui.so:$(TARGET_COPY_OUT_VENDOR)/lib/libui-v31.so
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.common-V2-ndk_platform.vendor \
+    libui-v31.vendor
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -260,7 +254,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.xiaomi_sm8350
+    android.hardware.biometrics.fingerprint-service.xiaomi
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
@@ -363,7 +357,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
 
 # Kernel
-PRODUCT_ENABLE_UFFD_GC := false
+PRODUCT_ENABLE_UFFD_GC := true
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -599,6 +593,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
+# QTI fwk-detect
+PRODUCT_PACKAGES += \
+    libvndfwk_detect_jni.qti.vendor:64 # Needed by CNE app
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
@@ -683,7 +681,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
 PRODUCT_PACKAGES += \
-    vendor.xperience.touch@1.0-service.xiaomi
+    vendor.lineage.touch@1.0-service.xiaomi
 
 # Ueventd
 PRODUCT_COPY_FILES += \
@@ -740,7 +738,6 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
     libwifi-hal-qcom \
-    libwpa_client \
     vendor.qti.hardware.capabilityconfigstore@1.0 \
     vendor.qti.hardware.capabilityconfigstore@1.0.vendor \
     WifiOverlay \

@@ -1,4 +1,8 @@
 # All unpinned blobs below are extracted from haydn V816.0.1.0.UKKCNXM
+# Current blobs with ELF checks disabled:
+# libOmxVideoDSMode depends on libOmxCore, which is a gnu makefile target
+# libc2d30_bltlib depends on intrinsic symbols which are difficult to shim like __aeabi_ul2d
+
 
 # ADSP
 vendor/bin/adsprpcd
@@ -66,6 +70,7 @@ vendor/lib64/vendor.xiaomi.hardware.micharge@1.0.so
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
+vendor/lib/libcdsprpc.so
 vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
@@ -76,6 +81,7 @@ vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_vendor_sym
 vendor/bin/cnd
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
 vendor/etc/init/cnd.rc
+vendor/lib/libxml.so
 vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
@@ -132,6 +138,10 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
 # Computer Vision (FastCV)
 vendor/etc/cvp/v2.0/facedetection/model1.dat
 vendor/etc/cvp/v2.1/facedetection/model2.dat
+vendor/lib/libcvp2_1.so
+vendor/lib/libcvp_common.so
+vendor/lib/libfastcvdsp_stub.so
+vendor/lib/libfastcvopt.so
 vendor/lib64/libcvp2_1.so
 vendor/lib64/libcvp_common.so
 vendor/lib64/libcvpcpuRev_skel.so
@@ -147,11 +157,14 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 # Consumer IR
 vendor/lib64/hw/consumerir.lahaina.so
 
+# Data - LA.UM.9.14.r1-19300.01-LAHAINA.QSSI12.0
+vendor/bin/netmgrd|4254e808131fa3a13aec1474bb769dbd539379ff
+
 # Diag HAL
--vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
+vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
 vendor/bin/diag-router
 vendor/etc/init/vendor.qti.diag.rc
-vendor/lib64/vendor.qti.diaghal@1.0.so
+vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=_vendor
 
 # Display - from XQ-BC72 61.2.A.0.410
 vendor/etc/display/DPU660.xml|b26dd73e361546d89bf3d7082a471703dc6ac2cb
@@ -209,7 +222,7 @@ vendor/lib64/libdisplayfeatureservice.so
 vendor/lib64/libmi-stc-HW-modulate.so
 vendor/lib64/libtinyxml.so
 vendor/lib64/libmiXmlParser.so
-vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so;MODULE_SUFFIX=_vendor
 
 # DPM
 system/framework/tcmclient.jar
@@ -228,7 +241,7 @@ system_ext/lib64/libdpmtcm.so
 system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libdpmqmihal.so
 
 # DRM
@@ -266,6 +279,7 @@ vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/bin/dspservice
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
+vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # Dolby SoundFX from vili V14.0.3.0.TKDMIXM
@@ -362,7 +376,6 @@ vendor/lib/libadreno_app_profiles.so
 vendor/lib/libadreno_compiler_cl.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libCB.so
-vendor/lib/libdmabufheap.so
 vendor/lib/libgsl.so
 vendor/lib/libkcl.so
 vendor/lib/libkernelmanager.so
@@ -382,7 +395,6 @@ vendor/lib64/libadreno_app_profiles.so
 vendor/lib64/libadreno_compiler_cl.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libCB.so
-vendor/lib64/libdmabufheap.so
 vendor/lib64/libgsl.so
 vendor/lib64/libkcl.so
 vendor/lib64/libkernelmanager.so
@@ -393,8 +405,8 @@ vendor/lib64/libOpenCL.so
 vendor/lib64/libOpenCL_adreno.so
 
 # Possible REQUIRED
-vendor/lib/libc2d30_bltlib.so
-vendor/lib64/libc2d30_bltlib.so
+vendor/lib/libc2d30_bltlib.so;DISABLE_CHECKELF
+vendor/lib64/libc2d30_bltlib.so;DISABLE_CHECKELF
 #vendor/lib/libgpudataproducer.so|2f3348614ea21ed4548154d0ab52ca2256d28e80
 #vendor/lib/libpvr.so|a1f1896b9f50223a9285d3496b8f9bcfa98d004d
 #vendor/lib64/libgpudataproducer.so|a2ebbc621637de0a63b5a6663b02575cb394fcda
@@ -478,7 +490,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
-vendor/lib64/vendor.qti.imsrtpservice@3.0.so
+vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 
 # IRQ balance
 vendor/bin/msm_irqbalance
@@ -519,7 +531,7 @@ vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
 vendor/etc/video_system_specs.json
 #vendor/etc/vintf/manifest/c2_manifest_vendor.xml
-vendor/lib/libmmosal.so
+vendor/lib/libmmosal.so;MODULE_SUFFIX=_vendor
 vendor/lib/libqc2vppfilter.so
 vendor/lib/libqcodec2_base.so
 vendor/lib/libqcodec2_basecodec.so
@@ -528,7 +540,7 @@ vendor/lib/libqcodec2_hooks.so
 vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
-vendor/lib64/libmmosal.so
+vendor/lib64/libmmosal.so;MODULE_SUFFIX=_vendor
 
 # Mlipay
 vendor/bin/mlipayd@1.1
@@ -554,21 +566,20 @@ vendor/lib/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so
 vendor/bin/nv_mac
 
 # OMX
-vendor/lib/libstagefright_soft_aacdec.so
-vendor/lib/libstagefright_soft_amrdec.so
-vendor/lib/libstagefright_soft_amrdec.so
-vendor/lib/libstagefright_soft_flacdec.so
-vendor/lib/libstagefright_soft_g711dec.so
-vendor/lib/libstagefright_soft_gsmdec.so
-vendor/lib/libstagefright_soft_mp3dec.so
-vendor/lib/libstagefright_soft_opusdec.so
-vendor/lib/libstagefright_soft_rawdec.so
-vendor/lib/libstagefright_soft_vorbisdec.so
-vendor/lib/libstagefright_soft_aacenc.so
-vendor/lib/libstagefright_soft_amrnbenc.so
-vendor/lib/libstagefright_soft_amrwbenc.so
-vendor/lib/libstagefright_soft_flacenc.so
-vendor/lib/libstagefright_flacdec.so
+vendor/lib/libstagefright_soft_aacdec.so;MODULE_SUFFIX=_vendor
+vendor/lib/libstagefright_soft_amrdec.so;MODULE_SUFFIX=_vendor
+vendor/lib/libstagefright_soft_flacdec.so;MODULE_SUFFIX=_vendor
+vendor/lib/libstagefright_soft_g711dec.so;MODULE_SUFFIX=_vendor
+vendor/lib/libstagefright_soft_gsmdec.so;MODULE_SUFFIX=_vendor
+vendor/lib/libstagefright_soft_mp3dec.so;MODULE_SUFFIX=_vendor
+vendor/lib/libstagefright_soft_opusdec.so;MODULE_SUFFIX=_vendor
+vendor/lib/libstagefright_soft_rawdec.so;MODULE_SUFFIX=_vendor
+vendor/lib/libstagefright_soft_vorbisdec.so;MODULE_SUFFIX=_vendor
+vendor/lib/libstagefright_soft_aacenc.so;MODULE_SUFFIX=_vendor
+vendor/lib/libstagefright_soft_amrnbenc.so;MODULE_SUFFIX=_vendor
+vendor/lib/libstagefright_soft_amrwbenc.so;MODULE_SUFFIX=_vendor
+vendor/lib/libstagefright_soft_flacenc.so;MODULE_SUFFIX=_vendor
+vendor/lib/libstagefright_flacdec.so;MODULE_SUFFIX=_vendor
 
 # Perf syst
 system_ext/etc/overscrolleroptimization/config.json
@@ -623,6 +634,8 @@ system_ext/lib64/libqti_workloadclassifiermodel.so
 system_ext/lib64/libskewknob_system.so
 system_ext/lib64/libsmomoconfig.qti.so
 system_ext/lib64/vendor.qti.hardware.iop@2.0.so
+system_ext/lib64/vendor.qti.hardware.limits@1.0.so
+system_ext/lib64/vendor.qti.hardware.limits@1.1.so
 system_ext/lib64/vendor.qti.hardware.perf@2.0.so
 system_ext/lib64/vendor.qti.hardware.perf@2.1.so
 system_ext/lib64/vendor.qti.hardware.perf@2.2.so
@@ -681,20 +694,19 @@ vendor/lib/libpasrutils.so
 vendor/lib/libqti-iopd-client.so
 vendor/lib/libqti-iopd.so
 vendor/lib/vendor.qti.hardware.iop@1.0.so
-vendor/lib/vendor.qti.hardware.iop@2.0.so
+vendor/lib/vendor.qti.hardware.iop@2.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libpasrutils.so
 vendor/lib64/libadaptlaunch.so
 vendor/lib64/libappclassifier.so
 vendor/lib64/liblmutils-ns.so
 vendor/lib64/libmemperfd.so
 vendor/lib64/libmeters-ns.so
-vendor/lib64/libpasrutils.so
 vendor/lib64/libprekill.so
 vendor/lib64/libqti-iopd-client.so
 vendor/lib64/libqti-iopd.so
 vendor/lib64/libsplh.so
 vendor/lib64/vendor.qti.hardware.iop@1.0.so
-vendor/lib64/vendor.qti.hardware.iop@2.0.so
+vendor/lib64/vendor.qti.hardware.iop@2.0.so;MODULE_SUFFIX=_vendor
 
 # Perf LM
 vendor/etc/lm/AdaptLaunchFeature.xml
@@ -729,9 +741,9 @@ vendor/bin/vendor.qti.qspmhal@1.0-service
 vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
 vendor/etc/seccomp_policy/qspm.policy
 vendor/lib/vendor.qti.qspmhal@1.0-impl.so
-vendor/lib/vendor.qti.qspmhal@1.0.so
+vendor/lib/vendor.qti.qspmhal@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
-vendor/lib64/vendor.qti.qspmhal@1.0.so
+vendor/lib64/vendor.qti.qspmhal@1.0.so;MODULE_SUFFIX=_vendor
 
 # QMI
 vendor/bin/irsc_util
@@ -744,6 +756,7 @@ vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
+vendor/lib/libmdmdetect.so
 vendor/lib/libqcci_legacy.so
 vendor/lib/libqcmaputils.so
 vendor/lib/libqdi.so
@@ -761,6 +774,7 @@ vendor/lib64/libdiag.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
+vendor/lib64/libmdmdetect.so
 vendor/lib64/libqcci_legacy.so
 vendor/lib64/libqcmaputils.so
 vendor/lib64/libqdi.so
@@ -825,11 +839,12 @@ vendor/etc/seccomp_policy/atfwd@2.0.policy
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
 vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
+vendor/lib/libconfigdb.so
+vendor/lib/libnetmgr.so
 vendor/lib64/deviceInfoServiceModuleNr.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/libhydra_common.so
 vendor/lib64/liblqe.so
-vendor/lib64/libmdmdetect.so
 vendor/lib64/libmodemapi.so
 vendor/lib64/libnetmgr.so
 vendor/lib64/libnetmgr_common.so
@@ -878,9 +893,6 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 
-# Data - LA.UM.9.14.r1-19300.01-LAHAINA.QSSI12.0
-vendor/bin/netmgrd|4254e808131fa3a13aec1474bb769dbd539379ff
-
 # Secure element
 vendor/bin/hw/vendor.qti.secure_element@1.2-service
 vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
@@ -922,6 +934,7 @@ vendor/app/SoterService/SoterService.apk
 
 # Thermal
 vendor/bin/mi_thermald
+vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 
 # Time services
