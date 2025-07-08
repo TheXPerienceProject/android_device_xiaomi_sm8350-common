@@ -283,8 +283,8 @@ vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # Dolby SoundFX from vili V14.0.3.0.TKDMIXM
-vendor/lib/soundfx/libhwdap.so
-vendor/lib64/soundfx/libhwdap.so
+vendor/lib/soundfx/libhwdap.so;DISABLE_CHECKELF
+vendor/lib64/soundfx/libhwdap.so;DISABLE_CHECKELF
 
 # Dolby Vision - from diting
 vendor/bin/hw/dolbycodec2

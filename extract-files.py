@@ -50,6 +50,8 @@ lib_fixups: lib_fixups_user_type = {
     ): lib_fixup_vendor_suffix,
     (
         'libOmxCore',
+        'libdapparamstorage',
+        'vendor.dolby.hardware.dms@2.0',
     ): lib_fixup_remove,
 }
 
