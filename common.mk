@@ -358,6 +358,7 @@ PRODUCT_COPY_FILES += \
 
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := true
+OVERRIDE_ENABLE_UFFD_GC := true
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -549,7 +550,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
+    android.hardware.power-service \
     android.hardware.power@1.2.vendor
 
 # Perf
