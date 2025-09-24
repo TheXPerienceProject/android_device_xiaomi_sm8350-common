@@ -91,13 +91,15 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_RAMDISK_USE_LZ4 := true
 
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := TARGET_PRODUCT=$(PRODUCT_DEVICE)
-ifeq ($(PRODUCT_DEVICE),redwood)
+ifeq ($(PRODUCT_DEVICE),redwood2)
   TARGET_KERNEL_SOURCE := kernel/xiaomi/sm7325
+  TARGET_KERNEL_NO_GCC := true
   # Any other configurations specific to the redwood device would go here
 else
   # Configurations for all other devices
