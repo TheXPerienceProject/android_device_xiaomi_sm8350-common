@@ -97,7 +97,7 @@ BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := TARGET_PRODUCT=$(PRODUCT_DEVICE)
-ifeq ($(PRODUCT_DEVICE),redwood2)
+ifeq ($(PRODUCT_DEVICE),redwood)
   TARGET_KERNEL_SOURCE := kernel/xiaomi/sm7325
   TARGET_KERNEL_NO_GCC := true
   # Any other configurations specific to the redwood device would go here
