@@ -157,7 +157,7 @@ PRODUCT_PACKAGES_DEBUG += \
 #$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
 
 PRODUCT_PACKAGES += \
-    Aperture \
+    Camera \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
     android.hardware.graphics.common-V4-ndk.vendor \
@@ -573,10 +573,6 @@ PRODUCT_PACKAGES += \
     android.hardware.power.stats-service.xiaomi.xml
 
 # Perf
-PRODUCT_BOOT_JARS += \
-    QPerformance \
-    UxPerformance
-
 PRODUCT_PACKAGES += \
     libpsi.vendor \
     libtflite \
