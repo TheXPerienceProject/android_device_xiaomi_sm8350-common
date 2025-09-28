@@ -24,5 +24,6 @@ cc_binary {
         "-Wall",
         "-Werror",
         "-DLOG_TAG=\"PowerStatsXiaomi\"",
+        "-Wno-unused-parameter",
     ],
 }

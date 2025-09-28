@@ -100,7 +100,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.power</name>
-        <version>3</version>
+        <version>6</version>
         <interface>
             <name>IPower</name>
             <instance>default</instance>
