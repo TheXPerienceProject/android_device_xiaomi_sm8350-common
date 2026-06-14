@@ -45,8 +45,6 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.diaghal@1.0',
         'vendor.qti.hardware.iop@2.0',
         'vendor.qti.qspmhal@1.0',
-        'vendor.xiaomi.hardware.displayfeature@1.0',
-        'libstagefright_flacdec',
     ): lib_fixup_vendor_suffix,
     (
         'libOmxCore',
@@ -73,12 +71,15 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcrypto_shim.so'),
     'vendor/lib64/android.hardware.secure_element@1.0-impl.so': blob_fixup()
         .remove_needed('android.hidl.base@1.0.so'),
-    ('vendor/lib64/libdlbdsservice.so', 'vendor/lib/libstagefright_soft_ac4dec.so', 'vendor/lib/libstagefright_soft_ddpdec.so'): blob_fixup()
+    ('vendor/lib64/libdlbdsservice.so', 'vendor/lib/libstagefright_soft_ac4dec.so', 'vendor/lib/libstagefright_soft_ddpdec.so',
+      'vendor/lib/libdolbyvision.so', 'vendor/lib64/libstagefright_soft_ac4dec.so', 'vendor/lib64/libstagefright_soft_ddpdec.so',
+      'vendor/lib64/libstagefrightdolby.so', 'vendor/lib/libstagefrightdolby.so'
+     ): blob_fixup()
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
     'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
         .add_line_if_missing('gettid: 1'),
-    'vendor/etc/msm_irqbalance.conf': blob_fixup()
-        .replace_needed('IGNORED_IRQ=27,23,38', 'IGNORED_IRQ=27,23,38,115,332'),
+    #'vendor/etc/msm_irqbalance.conf': blob_fixup()
+    #    .replace_needed('IGNORED_IRQ=27,23,38', 'IGNORED_IRQ=27,23,38,115,332'),
     ('vendor/lib/c2.dolby.client.so', 'vendor/lib64/c2.dolby.client.so'): blob_fixup()
         .add_needed('dolbycodec_shim.so'),
     ('vendor/lib64/mediadrm/libwvdrmengine.so', 'vendor/lib64/libwvhidl.so'): blob_fixup()
@@ -88,8 +89,13 @@ blob_fixups: blob_fixups_user_type = {
     (
         'vendor/lib/libcodec2_hidl@1.0_vendor.so',
      ): blob_fixup()
-        .add_needed('libbase_shim.so'),
+        .add_needed('libbase_shim.so')
         .add_needed('dolbycodec2_shim.so'),
+    'vendor/lib64/hw/displayfeature.default.so': blob_fixup()
+        .replace_needed(
+            'libstagefright_foundation.so',
+            'libstagefright_foundation-v33.so',
+        ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

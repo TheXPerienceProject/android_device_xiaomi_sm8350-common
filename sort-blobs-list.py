@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# SPDX-FileCopyrightText: 2021-2025 The LineageOS Project
+# SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -14,21 +14,21 @@ from pathlib import Path
 
 def is_blob(line: str) -> bool:
     line = line.strip()
-    return line and not line.startswith('#')
+    return bool(line) and not line.startswith('#')
 
 
 def get_source_file_name(line: str) -> str:
-    # Remove '-' from strings if there,
-    # it is used to indicate a build target
-    line = re.sub('^-', '', line)
+    # - Remove '-' from strings if there, it is used to indicate a build target
+    # - Discard anything after:
+    #   - ':' (destination path)
+    #   - ';' (additional options)
+    #   - '|' (sha1sum hash)
+    regex_match = re.match(r'^-?(.+?)(?:[:;\|].*?)?$', line)
 
-    # Remove the various additional arguments
-    line = re.sub(';.*', '', line)
+    if not regex_match:
+        return line
 
-    # Remove the destination path if there
-    line = re.sub(':.*', '', line)
-
-    return line
+    return regex_match.group(1)
 
 
 def strcoll_extract_utils(

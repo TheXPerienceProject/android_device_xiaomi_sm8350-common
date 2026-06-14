@@ -173,7 +173,7 @@ vendor/etc/display/DPU720.xml|4e54e8712d65773eb87867bf64a4cb98ea9bb8c3
 vendor/etc/display/DPU7__.xml|c056f3cb9fa123ca3de5b2a9775c184dddf25b9d
 vendor/lib64/libdisplayqos.so|aa222f4c1a2d2fb60944c44f8a82621d6bc75184
 vendor/lib64/libdisplayskuutils.so|37e4d543c696a5c9f0c1b44fd7299a0bc7dba5e8
-vendor/lib64/libdpps.so|9caf32a0d3636af579ea6e1a6c5638a16ed19444
+vendor/lib64/libdpps.so|42c8b6f9d85288037bde81dd996994231d420a09
 vendor/lib64/libqrtrclient.so|2474a708487c269c04afffbf755fff1686c6011c
 vendor/lib64/libqseed3.so|d62c37baf259250cadfcff8734e82054ed87bb96
 vendor/lib64/librcmask.so|8feb479fe590b6aec282ce3342574d9113f80516
@@ -185,9 +185,9 @@ vendor/lib64/libsdmextension.so|4c32026ff8cb1270081881d4def7a2ad05ad0b80
 vendor/lib64/libtinyxml2_1.so|11ceb3f1e7650c41621d47e5ec5567c8f466086e
 
 # display game enhance - from LA.VENDOR.13.2.6.r1-KAILUA.0
-vendor/lib64/libgame_enhance.so
+vendor/lib64/libgame_enhance.so|be1767306cb3be987ef5df3d6a76df2181d6819c
 
-vendor/etc/display/advanced_sf_offsets.xml
+vendor/etc/display/advanced_sf_offsets.xml|1082e51d509a18821ae5680d2217141ecdeb648a
 
 # Display HDR - from tundra S3SJS32.1-86-1-4
 vendor/lib64/libhdr_tm.so|7954c5cd5c0b23fe8d0609361c22d24c59f1448b
@@ -222,7 +222,6 @@ vendor/lib64/libdisplayfeatureservice.so
 vendor/lib64/libmi-stc-HW-modulate.so
 vendor/lib64/libmiXmlParser.so
 vendor/lib64/libtinyxml.so
-vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so;MODULE_SUFFIX=_vendor
 
 # DPM
 system/framework/tcmclient.jar
@@ -266,7 +265,7 @@ vendor/lib64/libssd.so
 vendor/lib64/libtrustedapploader.so
 
 # DRM - from miui 14
-vendor/lib64/libops.so
+vendor/lib64/libops.so|9b33ca1cf66aaf879dc6e9386fcc35f08324b234
 
 # DRM (Widevine)
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
@@ -312,31 +311,31 @@ vendor/lib64/libstagefright_soft_ddpdec.so
 vendor/lib64/libstagefrightdolby.so
 
 # Dolby Vision - from diting
-vendor/bin/hw/dolbycodec2
-vendor/etc/dolby_vision.cfg
-vendor/etc/init/dolbycodec2.rc
-vendor/lib/c2.dolby.avc.dec.so
-vendor/lib/c2.dolby.avc.sec.dec.so
-vendor/lib/c2.dolby.client.so
-vendor/lib/c2.dolby.egl.so
-vendor/lib/c2.dolby.hevc.dec.so
-vendor/lib/c2.dolby.hevc.enc.so
-vendor/lib/c2.dolby.hevc.sec.dec.so
-vendor/lib/c2.dolby.store.so
-vendor/lib/libcodec2_hidl@1.0.so:vendor/lib/libcodec2_hidl@1.0_vendor.so
-vendor/lib/libcodec2_vndk.so:vendor/lib/libcodec2_vndk_vendor.so
-vendor/lib/libdolbyottcameracontrol.so
-vendor/lib/libdolbyvision.so
-vendor/lib64/c2.dolby.avc.dec.so
-vendor/lib64/c2.dolby.avc.sec.dec.so
-vendor/lib64/c2.dolby.client.so
-vendor/lib64/c2.dolby.egl.so
-vendor/lib64/c2.dolby.hevc.dec.so
-vendor/lib64/c2.dolby.hevc.enc.so
-vendor/lib64/c2.dolby.hevc.sec.dec.so
-vendor/lib64/c2.dolby.store.so
-vendor/lib64/libdolbyottcameracontrol.so
-vendor/lib64/libdolbyvision.so
+vendor/bin/hw/dolbycodec2|10ddf8bc38a85054eb2b352823e7befe754ea2ff
+vendor/etc/dolby_vision.cfg|1154eef94f2a9c73120c728d9513f1364d9fe018
+vendor/etc/init/dolbycodec2.rc|1ea8b363e94fd4f5410cadceb30de8229fb38045
+vendor/lib/c2.dolby.avc.dec.so|1af361913381ac98523b78cc879385f031d28ebc
+vendor/lib/c2.dolby.avc.sec.dec.so|d3e579a3a4d92a92d5d833c99eea3d504fd54cfc
+vendor/lib/c2.dolby.client.so|337e46884d9cf8406c78e76843bf7cb07ca0b148
+vendor/lib/c2.dolby.egl.so|b6ba40013e45514cdaf94cab9a3a23c9a3b6f98f
+vendor/lib/c2.dolby.hevc.dec.so|da728b13f3e5a2890395df773ab2b0174209f1a6
+vendor/lib/c2.dolby.hevc.enc.so|7e2d292742a08e9d703d02ea1a6619b3c228eae7
+vendor/lib/c2.dolby.hevc.sec.dec.so|8977974ee470a4618e3868d63caef18477af9f49
+vendor/lib/c2.dolby.store.so|a262a67d5264731651f98a2353f95361684d8995
+vendor/lib/libcodec2_hidl@1.0.so:vendor/lib/libcodec2_hidl@1.0_vendor.so|eb6c3309be6c978babad32656c978078a791e01a
+vendor/lib/libcodec2_vndk.so:vendor/lib/libcodec2_vndk_vendor.so|aa5c8122d4d8883dfd1292a2192c6280db9f93f3
+vendor/lib/libdolbyottcameracontrol.so|b0e2b145c2714c523d5f765f0691b9dffed906f8
+vendor/lib/libdolbyvision.so|f727001940e2f8227370bf4cc5c0d922a06cc9cf
+vendor/lib64/c2.dolby.avc.dec.so|439a00c49d07e4fa2451162f75ad1ec6dc5b1ede
+vendor/lib64/c2.dolby.avc.sec.dec.so|9dfdde23db39260bcba3a1d417dd07a5b521f411
+vendor/lib64/c2.dolby.client.so|80175577ec1fbe3d0f9c7073168981f656eab3fc
+vendor/lib64/c2.dolby.egl.so|8acc4f5f81efc2d4d590a6f7b8584cd993ffd74a
+vendor/lib64/c2.dolby.hevc.dec.so|1bbf42f25506585e782bd26590c47d952dafe2a0
+vendor/lib64/c2.dolby.hevc.enc.so|e148e4c26d9185b2ebb00be93ae849ec8116be0a
+vendor/lib64/c2.dolby.hevc.sec.dec.so|eb4b421de11c209f2270d5bea5f80a1d8380907a
+vendor/lib64/c2.dolby.store.so|7a6964871f5c6ac19025f5fc7682219bc37c4357
+vendor/lib64/libdolbyottcameracontrol.so|60cf0e7e42ad4b6b3e5a64f2098b99d5d55d1b51
+vendor/lib64/libdolbyvision.so|22c517e552288fb1482201f731ef183f917c69da
 
 # Embedded Secure Element power manager
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
@@ -390,44 +389,44 @@ vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 #vendor/lib64/libkernelmanager.so | f9e2d973ad6e41b18b17a3fb745283c2
 
 # Graphics (Adreno) - from Adreno v805 from oculus
-vendor/lib/egl/eglSubDriverAndroid.so
-vendor/lib/egl/libEGL_adreno.so
-vendor/lib/egl/libGLESv1_CM_adreno.so
-vendor/lib/egl/libGLESv2_adreno.so
-vendor/lib/egl/libVkLayer_ADRENO_qprofiler.so
-vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/libCB.so
-vendor/lib/libOpenCL.so
-vendor/lib/libOpenCL_adreno.so
-vendor/lib/libadreno_app_profiles.so
-vendor/lib/libadreno_compiler_cl.so
-vendor/lib/libadreno_utils.so
-vendor/lib/libgsl.so
-vendor/lib/libkcl.so
-vendor/lib/libkernelmanager.so
-vendor/lib/libllvm-glnext.so
-vendor/lib/libllvm-qcom.so
-vendor/lib/libllvm-qgl.so
-vendor/lib64/egl/eglSubDriverAndroid.so
-vendor/lib64/egl/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so
-vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so
-vendor/lib64/egl/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/libCB.so
-vendor/lib64/libOpenCL.so
-vendor/lib64/libOpenCL_adreno.so
-vendor/lib64/libadreno_app_profiles.so
-vendor/lib64/libadreno_compiler_cl.so
-vendor/lib64/libadreno_utils.so
-vendor/lib64/libgsl.so
-vendor/lib64/libkcl.so
-vendor/lib64/libkernelmanager.so
-vendor/lib64/libllvm-glnext.so
-vendor/lib64/libllvm-qcom.so
-vendor/lib64/libllvm-qgl.so
+vendor/lib/egl/eglSubDriverAndroid.so|77ad83ccbc893914ff998d06a694ba9e26434073
+vendor/lib/egl/libEGL_adreno.so|acd98717a536e89a9058f710e83e6c6fa98e10f9
+vendor/lib/egl/libGLESv1_CM_adreno.so|dbffdf04054cf84becf6cf6ca9497e42e658bc00
+vendor/lib/egl/libGLESv2_adreno.so|a139ee8a2542793b53b88756a47bc311e04969a2
+vendor/lib/egl/libVkLayer_ADRENO_qprofiler.so|2f86bcc6db0ffde91ba1fcb486ae229591dabf34
+vendor/lib/egl/libq3dtools_adreno.so|42b8677d022b96293787838012baae8432f014cd
+vendor/lib/egl/libq3dtools_esx.so|84bdbb6ed0a8494d28f2ca57bea0f84566394244
+vendor/lib/libCB.so|c23f7622ad259ea7ce71a1ab521732ef02078cae
+vendor/lib/libOpenCL.so|8f9d6eddc61198b6ccd17bf2d6823f666b43497a
+vendor/lib/libOpenCL_adreno.so|9b016d254dc6fc8f387955e4eb8cecf76aac6ccd
+vendor/lib/libadreno_app_profiles.so|6642259e2b2b99e95b4bb917a03ee9ef401899db
+vendor/lib/libadreno_compiler_cl.so|5261c8a919f86f6f52e2050607e74cddaa6f56b5
+vendor/lib/libadreno_utils.so|16e870844b2cf0f09c189f501bf98680cba33900
+vendor/lib/libgsl.so|83a9928010dd7ffb8380f16a3947d62a5fd7cc8b
+vendor/lib/libkcl.so|fe520682dcb097b3964723f5edc4fc09a0501d8c
+vendor/lib/libkernelmanager.so|2f162ce1aa9a0f14ddda6e2e313e11d806682dd7
+vendor/lib/libllvm-glnext.so|b5ecad07166135b8d1cd99d297d01d8a206b0752
+vendor/lib/libllvm-qcom.so|961749da17e828f6e148a949a638b0a492888b74
+vendor/lib/libllvm-qgl.so|e462a09968684c0d5f44e7612155f22f3ae6c0a2
+vendor/lib64/egl/eglSubDriverAndroid.so|31fc1d054b4465b52efbb8c62239d81cfa7cc255
+vendor/lib64/egl/libEGL_adreno.so|bf75cb285e7604644706220d5eaed82dc1f90cf2
+vendor/lib64/egl/libGLESv1_CM_adreno.so|7699df4e155001115406bfc5b230ef45ab0d8044
+vendor/lib64/egl/libGLESv2_adreno.so|7f486cc31d49c44eab670227705c4a6707b92ed6
+vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so|091c90b8d03749c65c7d3b19f0358f7e4f0016a3
+vendor/lib64/egl/libq3dtools_adreno.so|2651e710745df1f4f9c761fbeaeb2ba261a1ceb0
+vendor/lib64/egl/libq3dtools_esx.so|cb479e1ed97b8d8795f3140d58fd82e3c69fb765
+vendor/lib64/libCB.so|c8daf0d842c4342df2e2636df3565a0c770bcec2
+vendor/lib64/libOpenCL.so|69a7a549fce6ce088310efee2a908e02ec6a7632
+vendor/lib64/libOpenCL_adreno.so|1967c2bfd68708c6ec08585badc27ee2820d9bad
+vendor/lib64/libadreno_app_profiles.so|36eed9484ca999dbbdd9fddf26ef7afaf37d8ca4
+vendor/lib64/libadreno_compiler_cl.so|b127831bc313bfa9f21071c140db6e000bef21f2
+vendor/lib64/libadreno_utils.so|8d637d46502a9b9fcf5ecb18fd3c6be2abab76d6
+vendor/lib64/libgsl.so|e5601a0a5d63483a86f1dd2c03d92b3306856a74
+vendor/lib64/libkcl.so|4a14621d38fb603f6be55bc214d86098f220ecf4
+vendor/lib64/libkernelmanager.so|cd325c53115463bedb564b57163ccecd7a388bf5
+vendor/lib64/libllvm-glnext.so|80a5c4670851ec40a909608dc5db4015ed5aa63a
+vendor/lib64/libllvm-qcom.so|07ab929eb91004b54171a299d604a9b8c6e6e31c
+vendor/lib64/libllvm-qgl.so|5a90504d0be547596932434e31847eafc762f81a
 
 # Possible REQUIRED
 vendor/lib/libc2d30_bltlib.so;DISABLE_CHECKELF
@@ -452,8 +451,8 @@ vendor/gpu/kbc/unified_kbcs_64.bin
 vendor/gpu/kbc/unified_ksqs.bin
 
 # Graphics (Vulkan) - from Adreno v805 from oculus
-vendor/lib/hw/vulkan.adreno.so|13983c19954458461fdd99d0914460299986f395
-vendor/lib64/hw/vulkan.adreno.so|5b047e34658c1f7deff061daeb8ca751bd75af31
+vendor/lib/hw/vulkan.adreno.so|f1a9acc46a82aadbd435f69743e0262cabfe77ce
+vendor/lib64/hw/vulkan.adreno.so|88412f7e0b6e300068f34928f527c9129131a0d8
 
 # HotwordEnrollment - from haydn V14.0.7.0.TKKMIXM
 product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|8ade0dc8f37d68d7e7deaf162cf8badded474673
@@ -591,7 +590,7 @@ vendor/lib/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so
 vendor/bin/nv_mac
 
 # OMX
-vendor/lib/libstagefright_flacdec.so;MODULE_SUFFIX=_vendor
+#vendor/lib/libstagefright_flacdec.so;MODULE_SUFFIX=_vendor
 vendor/lib/libstagefright_soft_aacdec.so;MODULE_SUFFIX=_vendor
 vendor/lib/libstagefright_soft_aacenc.so;MODULE_SUFFIX=_vendor
 vendor/lib/libstagefright_soft_amrdec.so;MODULE_SUFFIX=_vendor
