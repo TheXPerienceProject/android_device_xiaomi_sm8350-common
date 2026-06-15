@@ -96,6 +96,8 @@ blob_fixups: blob_fixups_user_type = {
             'libstagefright_foundation.so',
             'libstagefright_foundation-v33.so',
         ),
+    'vendor/lib64/libmisight.so': blob_fixup()
+        .add_needed('libjsoncpp_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

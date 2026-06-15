@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from taoyao V816.0.27.0.ULIMIXM
+# All unpinned blobs below are extracted from redwood OS2.0.17.0.UMSMIXM
 # Current blobs with ELF checks disabled:
 # libOmxVideoDSMode depends on libOmxCore, which is a gnu makefile target
 # libc2d30_bltlib depends on intrinsic symbols which are difficult to shim like __aeabi_ul2d
@@ -38,7 +38,7 @@ vendor/lib64/libbtnv.so
 vendor/lib64/libsoc_helper.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
-#vendor/lib64/vendor.qti.hardware.fm@1.0.so
+vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Bluetooth (A2DP)
 vendor/lib/btaudio_offload_if.so
@@ -930,6 +930,7 @@ vendor/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service
 vendor/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.citsensorservice@1.1-service.xml
 vendor/lib64/hw/vendor.xiaomi.hardware.citsensorservice@1.1-impl.so
+vendor/lib64/libmisight.so
 vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.1.so
 
